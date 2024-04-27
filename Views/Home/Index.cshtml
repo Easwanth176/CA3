@@ -1,0 +1,53 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<style>
+    body {
+        background-image: url('/images/lpu1.jpg');
+        background-size: 115%;
+        text-size-adjust: 25px;
+        text-align: center;
+    }
+
+    h1 {
+        text-align: center;
+        font-size: 45px;
+    }
+
+    input[type=text] {
+        width: 250px;
+        height: 20px;
+    }
+
+    input[type=password] {
+        width: 250px;
+        height: 22px;
+    }
+</style>
+
+@{
+    ViewData["Title"] = "Login";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+</head>
+<img src="~/images/ums_logo.png" width="550px">
+
+<body>
+    <h1>Sign In</h1>
+    @if (ViewData["ErrorMessage"] != null)
+    {
+        <script>alert("@ViewData["ErrorMessage"]");</script>
+    }
+    <form action="~/Home/Login" method="post">
+        <input type="text" id="username" name="username" placeholder="Username" required /><br /><br />
+        <input type="password" id="password" name="password" placeholder="Password" required /><br /><br />
+        <input type="image" src="~/images/login_icon.png" width="75" alt="submit">
+    </form>
+</body>
+</html>
+

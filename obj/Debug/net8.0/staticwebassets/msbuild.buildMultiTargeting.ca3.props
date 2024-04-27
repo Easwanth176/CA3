@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\ca3.props" />
+</Project>
